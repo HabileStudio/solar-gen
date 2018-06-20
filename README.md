@@ -2,7 +2,8 @@
 Artwork generator based on music variables in SVG
 
 ## What it does
-Basically this creates cool shapes and polygons based on musical variables (like amount of bass, volume of rythmic, distortion, etc.) You can then edit in Illustrator, InkScape, etc.
+Basically this creates cool shapes and polygons based on musical variables (like amount of bass, volume of rythmic, distortion, etc.) that the user defines. You can then edit in Illustrator, InkScape, etc.
+[Demo here](http://www.habilestudio.com/solar-gen)
 
 ## Technical
 * This is 95% pure JavaScript (ES6) that is (for now) browser-compiled with Babel.
