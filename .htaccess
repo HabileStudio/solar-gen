@@ -1,0 +1,7 @@
+SetEnv PHP_VER 7
+
+Options -Indexes
+
+RewriteEngine on
+
+RewriteRule ^$ index.php
