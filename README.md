@@ -16,6 +16,7 @@ Basically this creates cool shapes and polygons based on musical variables (like
     RewriteEngine on
     RewriteRule ^$ index.php
 ```
+And finally **change the base_url()** function in head.php to reflect your directory structure.
 * It also uses [SVG.js library](https://github.com/svgdotjs/svg.js) and a plugin called [svg.shapes.js](https://github.com/svgdotjs/svg.shapes.js/)
 
 ## Cool features
