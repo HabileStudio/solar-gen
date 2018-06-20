@@ -1,0 +1,385 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin-ext');
+
+/* RESET
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* END RESET */
+
+body, html{
+  width :         100%;
+  height :        100%;
+  margin :        0;
+  padding :       0;
+  font-family :   Roboto;
+  font-weight :   300;
+}
+
+
+#interface{
+  position :      absolute;
+  width :         560px;
+  height :        320px;
+  top :           32px;
+  right :         64px;
+  z-index :       20;
+  color :         #ffffff;
+}
+  .layer{
+    float:        left;
+    width :       240px;
+    margin :      10px 40px 10px 0;
+    overflow:     hidden;
+  }
+    h1{
+      font-size :     18px;
+      margin-bottom : 16px;
+      text-transform: uppercase;
+      font-weight:    300;
+      letter-spacing: 4px;
+      color :         #1050cc;
+      line-height :   20px;
+    }
+    .slider{
+      float:          left;
+      margin-bottom : 24px;
+    }
+      h2{
+        font-size :     10px;
+        text-transform: uppercase;
+        text-align:     center;
+        letter-spacing: 0.5px;
+        color :         #50aadd;
+      }
+
+/* RESET SLIDERS */
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+
+
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  background: #dddddd;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  background: #dddddd;
+  cursor: pointer;
+}
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  background: #dddddd;
+  cursor: pointer;
+}
+
+
+input[type=range]::-webkit-slider-thumb:hover{
+  background :      #ffffff;
+}
+input[type=range]::-moz-range-thumb:hover{
+  background :      #ffffff;
+}
+input[type=range]::-ms-thumb:hover{
+  background :      #ffffff;
+}
+
+
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: #1050cc;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #1050cc;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: #1050cc;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 1px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #1050cc;
+  border: 0.2px solid #010101;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #1050cc;
+}
+input[type=range]::-ms-fill-upper {
+  background: #1050cc;
+  border: 0.2px solid #010101;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #1050cc;
+}
+
+input[type=range]::-webkit-slider-runnable-track:hover{
+  background: #50aadd;
+}
+
+
+
+
+input[type=range]{
+  display :       block;
+  width :         60px;
+  height :        60px;
+  margin :        0 auto;
+  text-align:     center;
+  /*-webkit-appearance: slider-vertical;*/
+  transform-origin: 50% 50%;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+
+
+#drawing{
+/*  float:          right;
+  margin :        30px 30px 0 0;
+  width :         495px;
+  height :        700px;
+  border :        1px solid #aaaaaa;*/
+  position :      absolute;
+  top :           0;
+  left :          0;
+  width :         100%;
+  height :        100%;
+  z-index:        0;
+}
+
+#export{
+  width :         560px;
+  position :      absolute;
+  top :           390px;
+  right :         64px;
+  z-index :       20;
+}
+  #export a:link,
+  #export a:visited{
+    float:            right;
+    display :         inline-block;
+    width :           60px;
+    text-decoration:  none;
+    color:            #50aadd;
+    margin :          0 40px 0 0;
+    font-size:        11px;
+    text-transform:   uppercase;
+    text-align :      center;
+  }
+    #export a span.button{
+      width :           60px;
+      height :          60px;
+      display :         block;
+      margin-bottom :   12px;
+      background :      #dddddd;
+      border-radius:    3px;
+      box-shadow:       1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    }
+    #export a:active,
+    #export a:hover{
+      color :           #50aadd;
+    }
+    #export a:active span.button,
+    #export a:hover span.button{
+      background :      #ffffff;
+    }
+
+
+
+    a#export-link span.button{
+      background :        #000045;
+    }
+    a#export-link:active span.button,
+    a#export-link:hover span.button{
+      background :        #0000ff;
+    }
+
+    a#export-settings span.button{
+      background :        #002545;
+    }
+    a#export-settings:active span.button,
+    a#export-settings:hover span.button{
+      background :        #0060ff;
+    }
+
+    a#import-settings span.button{
+      background :        #004545;
+    }
+    a#import-settings:active span.button,
+    a#import-settings:hover span.button{
+      background :        #00ddff;
+    }
+
+    a#randomize span.button{
+      background :        #304545;
+    }
+    a#randomize:active span.button,
+    a#randomize:hover span.button{
+      background :        #80ffff;
+    }
+
+
+
+.hidden{
+  position :      absolute;
+  top :           0;
+  left :          0;
+  display :       none;
+  width :         400px;
+  height:         350px;
+  margin :        0 auto;
+  background :    #353535;
+  padding :       20px;
+  z-index :       100;
+}
+  .hidden p,
+  .hidden textarea{
+    width :         350px;
+    margin :        25px 0 0 0;
+    color :         #ffffff;
+  }
+  .hidden textarea{
+    height :        200px;
+    border :        none;
+    background :    #252525;
+    letter-spacing: 0.2px;
+    line-height :   1.5em;
+    font-size :     11px;
+    padding :       5%;
+  }
+  .hidden button{
+    border :        none;
+    background :    #000000;
+    color :         #ffffff;
+    width :         100px;
+    height :        50px;
+    margin :        25px auto;
+  }
+  .hidden button:hover,
+  .hidden button:focus{
+    background :    #252525;
+    cursor :        pointer;
+  }
+
+  a.close:link,
+  a.close:visited{
+    display:        block;
+    position :      absolute;
+    padding:        10px;
+    right :         0;
+    top :           0;
+    background :      #000000;
+    color:            #ffffff;
+    text-decoration:  none;
+  }
+  a.close:active,
+  a.close:hover{
+    background :    #ffffff;
+    color :         #000000;
+  }
